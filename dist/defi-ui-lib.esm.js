@@ -1,8 +1,9 @@
-import * as React from 'react';
-// import { Modal } from 'react-bootstrap';
+import { createElement, Fragment } from 'react';
+
 // import Loader from 'react-loader-spinner';
 // Delete me
-const TransactionModal: React.FC = () => {
+
+var TransactionModal = function TransactionModal() {
   // const [mode, setMode] = React.useState<string>('success');
   // React.useEffect(() => {
   //   setMode('success');
@@ -41,7 +42,6 @@ const TransactionModal: React.FC = () => {
   //                     <line x1="12" y1="16" x2="12" y2="8"></line>
   //                   </svg>
   //                 </div>
-
   //                 <div className="transaction-details">
   //                   <div className=" transaction-status ">
   //                     Transaction Submitted
@@ -136,9 +136,9 @@ const TransactionModal: React.FC = () => {
   //       return <></>;
   //   }
   // }
-
   // return <div>{transactionMethods()}</div>;
-  return <>TransModal</>;
+  return createElement(Fragment, null, "TransModal");
 };
 
 export default TransactionModal;
+//# sourceMappingURL=defi-ui-lib.esm.js.map
