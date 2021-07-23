@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Modal } from 'react-bootstrap';
 import Loader from 'react-loader-spinner';
-import Alert from './error.svg';
 // Delete me
 const TransactionModal: React.FC = (props: any) => {
   const [mode, setMode] = React.useState<string>('success');
-
+  React.useEffect(() => {
+    setMode('success');
+  }, []);
   function transactionMethods() {
     switch (mode) {
       case 'success':
@@ -117,12 +118,7 @@ const TransactionModal: React.FC = (props: any) => {
               </Modal.Header>
               <Modal.Body>
                 <div className="modal-body-info">
-                  <img
-                    className="icon"
-                    src={Alert}
-                    alt="alert icon"
-                    width="85"
-                  />
+                  <img className="icon" src={''} alt="alert icon" width="85" />
                   <h5 className="mt-4">Transaction Rejected</h5>
                   <button
                     className="btn btn-primary custom-transaction-btn"
